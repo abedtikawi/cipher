@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>System Security</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+   
+   
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Phase 1</a></li>
+        <li><a href="#">Phase 2</a></li>
+        <li><a href="#">Phase 3</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h3>Phase 1</h3>
+
+      <p>
+        Tool to decrypt/encrypt with Caesar Cipher, (if you dont know the key ,
+        use brute force method)
+      </p>
+
+      <span>Enter The key : </span>
+      <input type="number" name="" id="key" min="-25" max="25" /><br />
+      <span>Enter the text :</span>
+      <input type="text" name="" id="textinput" /><br /><br />
+      <input type="submit" value="Submit" onclick="calculate()" />
+      <input type="submit" value="Clear" class='Clear' onclick="location.reload();" />
+      <ul id="encryptList"></ul>
+      <br />
+
+      <br />
+      <span>Enter the text :</span>
+      <input type="text" name="" id="textinput2" /><br /><br />
+      <input type="submit" value="Brute Force" onclick="bruteForce()" />
+      <input type="submit" value="Clear" class='Clear' onclick="location.reload();" />
+      <ul id="bruteForceList"></ul>
+      <br />
+      <br />
+
+      <h2>Rail Fence Cipher</h2>
+      <p>
+        Enter the word that you want to ENCRYPT, then put "NUMBER" in a key form
+        to make how many rail you need
+      </p>
+
+      Plaintext<br />
+      <textarea id="p" name="p" rows="4" cols="50">attack at dawn</textarea>
+      <p>
+        line = <input id="depth" name="depth" size="5" value=" " type="text" />
+      </p>
+      <p>
+        <input
+          name="btnEn"
+          value="v Encrypt v"
+          onclick="encryptRailFence()"
+          type="button"
+        />
+        <input
+          name="btnDe"
+          value="^ Decrypt ^"
+          onclick="decryptRailFence()"
+          type="button"
+        />
+        <input type="submit" value="Clear" class='Clear' onclick="location.reload();" />
+      </p>
+      <p>
+        Ciphertext<br /><textarea id="c" name="c" rows="4" cols="50"></textarea>
+      </p>
+    </div>
+
+    <script src="./security.js"></script>
+
+    </script>
+  </body>
+</html>
